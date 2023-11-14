@@ -1,4 +1,3 @@
-
 class NewsController {
     // [GET] /news
     index(req, res) {
@@ -6,8 +5,8 @@ class NewsController {
     }
     // [GET] :slag
     show(req, res) {
-        res.send('New detail !!!')
+        res.send('New detail !!!');
     }
 }
 
-module.exports = new NewsController;
+module.exports = new NewsController();
