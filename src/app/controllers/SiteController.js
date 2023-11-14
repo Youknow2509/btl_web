@@ -1,14 +1,16 @@
 const Course = require('../model/Course');
-
+const { mutipleMongooeseToObj } = require('../../util/mongooes');
 class SiteController {
     // [GET] /home
-    async index(req, res) {
+    async index(req, res, next) {
         //res.render('home.hbs');
         try {
-            const result = await Course.find({});
-            res.json(result); // Handle the result as needed
+            const courses = await Course.find({});
+            res.render('home.hbs',{
+                courses: mutipleMongooeseToObj(courses)
+            }); // Handle the result as needed
         } catch (error) {
-            res.status(400).json({ error: 'Err !!!' }); // Handle any errors that occurred during the query
+            next(err); 
         }
     }
     // [GET] /search
