@@ -3,11 +3,13 @@
         {{#each courses}}
         <div class="col-sm-6 col-lg-4 ">
              <div class="card">
-                <img src="{{this.img}}" alt="card img" class="card-img-top">
+                <a href="/courses/{{this.slag}}" class="">
+                    <img src="{{this.img}}" alt="card img" class="card-img-top">
+                </a>
                 <div class="card-body">
-                    <h5 class="card-title">
-                        {{this.name}}
-                    </h5>
+                    <a href="/courses/{{this.slag}}" class="">
+                        <h5 class="card-title">{{this.name}}</h5>
+                    </a>
                     <p class="card-text">
                         {{this.description}}
                     </p>

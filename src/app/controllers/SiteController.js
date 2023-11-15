@@ -6,11 +6,11 @@ class SiteController {
         //res.render('home.hbs');
         try {
             const courses = await Course.find({});
-            res.render('home.hbs',{
-                courses: mutipleMongooeseToObj(courses)
+            res.render('home.hbs', {
+                courses: mutipleMongooeseToObj(courses),
             }); // Handle the result as needed
         } catch (error) {
-            next(err); 
+            next(err);
         }
     }
     // [GET] /search

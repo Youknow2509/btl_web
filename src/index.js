@@ -31,7 +31,7 @@ app.use(morgan('combined', { stream: accessLogStream }));
 app.engine('hbs', engine({ extname: '.hbs' }));
 // Register `app.handlebars` with the Express app.
 app.set('view handlebars', '.hbs');
-app.set('views', path.join(__dirname, 'resource','views'));
+app.set('views', path.join(__dirname, 'resource', 'views'));
 
 // Route init
 route(app);
