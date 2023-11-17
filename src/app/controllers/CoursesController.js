@@ -21,11 +21,40 @@ class CoursesController {
         try {
             const formdate = req.body;
             formdate.img = `https://img.youtube.com/vi/${formdate.videoid}/sddefault.jpg`;
-            await Course.create(formdate);
+            
+            const small = new Course(formdate);
+            await small.save();
+            
             res.redirect('/');
         } catch (error) {
             console.log('Err save file err in /courses/store !!!');
+            res.redirect('/');
         }
+    }
+    // [GET] courses/:_id/edit
+    async edit(req, res, next) {
+        try {
+            const courses = await Course.findById(req.params._id);
+            res.render('./courses/edit.hbs', {
+                courses: mongooeseToObj(courses),
+            });
+        } catch (error) {
+            res.render('err.hbs')
+        }
+    }
+    // [PUT] courses/:_id/
+    update(req, res, next) {
+        Course.findByIdAndUpdate(req.params._id, req.body, function (err, docs) {
+            if (err) {
+                console.log(err);
+            } else {
+                console.log("Updated User : ", docs);
+                res.redirect('/me/store/courses/');
+            }
+        });
+    }
+    remote(req, res, next) {
+
     }
 }
 

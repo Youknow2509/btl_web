@@ -1,9 +1,29 @@
 @import 'variables';
 
+// reset 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+div{
+    display: block;
+    width: 100%;
+}
+
 h1{
     color: $red_color;
     font-size: 32px;
 }
 h3{
     border: 3px solid black;
+}
+.user-avt {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    margin-right: 4px;
 }
