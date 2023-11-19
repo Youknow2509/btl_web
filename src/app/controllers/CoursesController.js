@@ -53,8 +53,17 @@ class CoursesController {
             }
         });
     }
-    remote(req, res, next) {
-
+    // [DELETE] courses/:_id/del
+    del(req, res, next) {
+        Course.findByIdAndDelete(req.params._id, function (err, docs) {
+            if (err) {
+                console.log(err);
+                res.render('err.hbs');
+            } else {
+                console.log("Deleted User : ", docs);
+                res.redirect('/me/store/courses/');
+            }
+        });
     }
 }
 

@@ -32,7 +32,8 @@ const accessLogStream = fs.createWriteStream(
     { flags: 'a' },
 );
 // setup the logger
-app.use(morgan('combined', { stream: accessLogStream }));
+// app.use(morgan('combined', { stream: accessLogStream }));
+
 // templace engine "EXPRESS-HANDLEBARS"
 app.engine('hbs', engine({ 
     extname: '.hbs',
