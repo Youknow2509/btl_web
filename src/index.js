@@ -1,5 +1,7 @@
+
 const express = require('express');
 const morgan = require('morgan');
+const bodyParser = require('body-parser');
 const { engine } = require('express-handlebars');
 const fs = require('fs');
 
@@ -21,7 +23,7 @@ const port = 3000;
 // Xử lí sử dụng tệp tĩnh, gắn css, img , .....
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(express.urlencoded());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 
 // create a write stream (in append mode)
