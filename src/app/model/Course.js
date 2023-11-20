@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 const slug = require('mongoose-slug-generator');
+const mongoose_delete = require('mongoose-delete');
+
 
 mongoose.set('strictQuery', true); // fix: DeprecationWarning: Mongoose: the `strictQuery` option will be switched back to `false` by default in Mongoose 7. Use `mongoose.set('strictQuery', false);` if you want to prepare for this change. Or use `mongoose.set('strictQuery', true);` to suppress this warning.
-
-mongoose.plugin(slug);
 
 const Schema = mongoose.Schema;
 
@@ -17,5 +17,15 @@ const Course = new Schema({
 }, {
     timestamps: true,
 });
+
+// add plugin
+mongoose.plugin(slug);
+Course.plugin(mongoose_delete, { 
+    deletedAt : true,
+    overrideMethods: 'all', // overide add method
+});
+    
+Course.plugin(mongoose_delete, { overrideMethods: 'all' });
+
 
 module.exports = mongoose.model('Course', Course);

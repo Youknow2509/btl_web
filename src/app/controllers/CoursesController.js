@@ -55,7 +55,7 @@ class CoursesController {
     }
     // [DELETE] courses/:_id/del
     del(req, res, next) {
-        Course.findByIdAndDelete(req.params._id, function (err, docs) {
+        Course.deleteById(req.params._id, function (err, docs) {
             if (err) {
                 console.log(err);
                 res.render('err.hbs');
