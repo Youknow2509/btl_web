@@ -1,33 +1,46 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container">
-    <a class="navbar-brand" href="/">V</a>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto  justify-content-between w-100" >
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Home</a>
-        </li>
-        
-        <li class="nav-item dropdown position-relative end-0">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="https://avatars.githubusercontent.com/u/88392742" alt="user avata" class="user-avt">
-            Vinh
-          </a>
-          <ul class="dropdown-menu text-center">
-            <li class="dropdown-item ms-2"><a class="nav-link" href="/courses/creat">Dang khoa hoc</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li class="dropdown-item ms-2"><a class="nav-link" href="/me/store/courses/">Khoa hoc cua toi</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li class="dropdown-item ms-2"><a class="nav-link" href="/me/store/news/">Bai dang cua toi</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Logout</a></li>
-          </ul>
-        </li>   
-      </ul>
-    </div>
-  </div>
-</nav>
+<header>
+        <div class="header-img">
+            <img src="/img/logo-utc.png" alt="logo-utc">
+        </div>
+        <div class="header-bars">
+            <i class="fa-solid fa-bars fa-2xl"></i>
+        </div>
+        <div class="header-list">
+            <a href="#" class="header-bars__trangchu">Trang chủ</a>
+            <a href="#" class="header-bars__nghanhhoc open-it">Tuyển Sinh</a>
+            <a href="#" class="header-bars__tuyensinh">Bộ Môn</a>
+            <a href="#" class="header-bars__thamkhao">Tham Khảo</a>
+        </div>
+        <div class="list-notification">
+            <div class="notification success-notification" id="success">
+                <div class="icon_notification">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <div class="mess-text">
+                    <h3>Thành công</h3> 
+                    <p>Bạn đã đăng kí nhận tư vấn thành công</p>
+                </div>
+            </div>
+            <div class="notification error-notification" id="error">
+                <div class="icon_notification">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                </div>
+                <div class="mess-text">
+                    <h3>Lỗi</h3> 
+                    <p>Vui lòng nhập lại dữ liệu</p>
+                </div>
+            </div>
+        </div>
+        <div class="header-list-down">
+            <a href="#" class="header-bars__trangchu">Trang chủ</a>
+            <a href="#" class="header-bars__nghanhhoc open-it">Tuyển Sinh</a>
+            <a href="#" class="header-bars__tuyensinh">Bộ Môn</a>
+            <a href="#" class="header-bars__thamkhao">Tham Khảo</a>
+        </div>
+        <div class="header-search">
+            <input type="text" class="header-search__input" placeholder="Tìm kiếm ...">
+            <div class="header-search__icon">
+                <i class="fa-solid fa-magnifying-glass fa-sm"></i>
+            </div>
+        </div>
+    </header>
