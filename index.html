@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form id="f1" action="" method="post">
+            <div class="title">
+                <h1>Đăng kí thành viên</h1>
+            </div>
+            <div class="form-group name">
+                <label for="name">Họ và tên </label>
+                <input type="text" name="name" value="" placeholder="VD: Lý Trần Vinh">
+                <span></span>
+            </div>
+            <div class="form-group mail">
+                <label for="mail">Mail </label>
+                <input type="text" name="mail" value="" placeholder="VD: lytranvinh.work@gmail.com">
+                <span></span>
+            </div>
+            <div class="form-group phone">
+                <label for="phone">Số điện thoại </label>
+                <input type="phone" name="phone" value="" placeholder="VD: +8488888888">
+                <span></span>
+            </div>
+            <div class="form-group passwork">
+                <label for="passwork">Mật khẩu </label>
+                <input type="password" name="passwork" value="" placeholder="Nhập mật khẩu" required>
+                <span></span>
+            </div>
+            <div class="form-group passwork-r">
+                <label for="passwork-r">Nhập lại mật khẩu </label>
+                <input type="password" name="passwork-r" value="" placeholder="Nhập lại mật khẩu" required>
+                <span></span>
+            </div>
+            <div class="btn-sb">
+                <button>Đăng ký</button>
+            </div>
+        </form>
+    </div>
+    <script src="formValidation.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
